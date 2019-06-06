@@ -16,6 +16,45 @@
 	<!-- jQuery -->
 	<script src="js/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	
+	<!-- For Form -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function() {
+
+					$("#submit").click(function(e) {
+						e.preventDefault();
+
+						var name = $("#name").val(),
+							email = $("#email").val(),
+							phone = $("#phone").val(),
+							wsource = $("#wsource").val(),
+							desc = $("#desc").val();
+
+						$.ajax({
+							type: "POST",
+							url: 'https://6632bs8ve0.execute-api.us-east-1.amazonaws.com/TestAPI/contact-us',
+							contentType: 'application/json',
+							data: JSON.stringify({
+								'name': name,
+								'phone':phone,
+								'email': email,
+								'desc': desc,
+								'wsource': "www.johnprefer.com - ContactForm"
+							}),
+							success: function(res){
+								$('#form-response').text('Thank You Message Sent.');
+							},
+							error: function(){
+								$('#form-response').text('Error.');
+							}
+						});
+
+					})
+
+				});
+			</script> 
+
 
 </head>
 <body>
@@ -131,55 +170,57 @@
 			</div>
 		</div>
 		<div class="section-facts">
+		<div class="fluid-container">
+		
 			<div class="row">
-				<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 text-center">
-					<div class="counter-item">
-						<div class="counter-inner">
-							<div class="counter-body">
-								<h2 class="start-count" data-count="1604">0</h2>
-								<h6>Projects Completed</h6>
-								<div class="end-count"></div>
-							</div>				
+				<div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center">
+					<article class="service animated fadeInUp">
+						<div class="service-header">
+							<h4>Web Development</h4>
 						</div>
-					</div>
-				</div> <!-- .counter-item -->
-				<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 text-center">
-					<div class="counter-item">
-						<div class="counter-inner">
-							<div class="counter-body">
-								<h2 class="start-count" data-count="21">0</h2>
-								<h6>Team Members</h6>
-								<div class="end-count"></div>
-							</div>				
+						<div class="service-icon">
+							<img src="img/slide_sq_01.jpg">
 						</div>
-					</div>
-				</div> <!-- .counter-item -->
-				<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 text-center">
-					<div class="counter-item">
-						<div class="counter-inner">
-							<div class="counter-body">
-								<h2 class="start-count" data-count="302">0</h2>
-								<h6>Satisfied Clients</h6>
-								<div class="end-count"></div>
-							</div>				
+						<div class="service-text">
+							<p>Modest is <a href="http://www.templatemo.com/tag/responsive">free responsive template</a>, mobile ready layout, and animated contents. You can use this template for your website. Please tell your friends about it. Thank you.</p>
 						</div>
-					</div>
-				</div> <!-- .counter-item -->
-				<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 text-center">
-					<div class="counter-item">
-						<div class="counter-inner">
-							<div class="counter-body">
-								<h2 class="start-count" data-count="946">0</h2>
-								<h6>Cups of Coffee</h6>
-								<div class="end-count"></div>
-							</div>				
+					</article>
+				</div>
+				<div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center">
+					<article class="service animated fadeInUp">
+						<div class="service-header">
+							<span class="s-left"></span>
+							<span class="s-right"></span>
+							<h4>Quality Photography</h4>
 						</div>
-					</div>
-				</div> <!-- .counter-item -->
+						<div class="service-icon">
+							<img src="img/slide_sq_02.jpg">
+						</div>
+						<div class="service-text">
+							<p>Modest template is provided by <a href="http://www.templatemo.com">templatemo.com</a> website. Fusce pretium, elit vel ornare porta, felis lorem ornare metus, in vulputate nibh odio ut ligula.</p>
+						</div>
+					</article>
+				</div>
+				<div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center">
+					<article class="service animated fadeInUp">
+						<div class="service-header">
+							<span class="s-left"></span>
+							<span class="s-right"></span>
+							<h4>Worldwide Support</h4>
+						</div>
+						<div class="service-icon">
+							<img src="img/slide_sq_03.jpg">
+						</div>
+						<div class="service-text">
+							<p>Quisque a lobortis ante. Sed a adipiscing tortor. In nec imperdiet justo. Fusce pretium, elit vel ornare porta, felis lorem ornare metus, in vulputate nibh odio ut ligula.</p>
+						</div>
+					</article>
+				</div>
 			</div>
 		</div>
 	</div>
-	
+
+			
 	<!-- BIO -->
 	<div class="fluid-container" id="bio">
 		<div class="row">
@@ -239,6 +280,54 @@
 						<a href="#"><h4 class="entry-title">DELICIOUS ONE</h4></a>
 					</div>
 				</article>
+				<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 text-center">
+					<div class="counter-item">
+						<div class="counter-inner">
+							<div class="counter-body">
+								<h2 class="start-count" data-count="1604">0</h2>
+								<h6>Projects Completed</h6>
+								<div class="end-count"></div>
+							</div>				
+						</div>
+					</div>
+				</div> <!-- .counter-item -->
+				<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 text-center">
+					<div class="counter-item">
+						<div class="counter-inner">
+							<div class="counter-body">
+								<h2 class="start-count" data-count="21">0</h2>
+								<h6>Team Members</h6>
+								<div class="end-count"></div>
+							</div>				
+						</div>
+					</div>
+				</div> <!-- .counter-item -->
+				<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 text-center">
+					<div class="counter-item">
+						<div class="counter-inner">
+							<div class="counter-body">
+								<h2 class="start-count" data-count="302">0</h2>
+								<h6>Satisfied Clients</h6>
+								<div class="end-count"></div>
+							</div>				
+						</div>
+					</div>
+				</div> <!-- .counter-item -->
+				<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 text-center">
+					<div class="counter-item">
+						<div class="counter-inner">
+							<div class="counter-body">
+								<h2 class="start-count" data-count="946">0</h2>
+								<h6>Cups of Coffee</h6>
+								<div class="end-count"></div>
+							</div>				
+						</div>
+					</div>
+				</div> <!-- .counter-item -->
+			</div>
+		</div>
+	</div>
 			</div>
 		</div>
 	</div>
@@ -289,27 +378,30 @@
 		<div class="section-contact">
 			<div class="row">
 				<div class="col-md-5 col-sm-12 col-xs-12">
-					<form action="#" method="post" id="contact-form">
+				</form>
+					<!-- <form action="#" method="post" id="contact-form">-->
 						<fieldset>
 							<label for="name">Name:</label>
-							<input type="text" name="name" id="name">
+							<input type="text" name="name" id="name" class="form-control"> <class="input-field"> <span class="required">
 						</fieldset>
 						<fieldset>
 							<label for="email">Email Address:</label>
-							<input type="email" name="email" id="email">
+							<input type="email" name="email" id="email" class="form-control"> <class="input-field"> <span class="required">
 						</fieldset>
 						<fieldset>
 							<label for="phone">Phone Number:</label>
-							<input type="tel" name="phone" id="phone">
+							<input type="tel" name="phone" id="phone" class="form-control"> <class="input-field"> <span class="required">
 						</fieldset>
 						<fieldset>
 							<label for="message">Describe your project:</label>
-							<textarea name="message" id="message" rows="4"></textarea>
+							<textarea name="message" id="desc" rows="4" class="form-control"></textarea > <class="input-field"> <span class="required">
 						</fieldset>
 						<fieldset>
-							<input type="submit" class="button-dark" value="Send Message">
+							<input type="submit" class="button-dark" value="Send Message" id="submit">
 						</fieldset>
 					</form>
+					<div id="form-response"></div>
+						
 				</div>
 				<div class="col-md-7 col-sm-12 col-xs-12">
 					<div class="contact-map">
