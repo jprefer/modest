@@ -6066,7 +6066,7 @@ a[class*=button-].button-light,input[class*=button-].button-light,button[class*=
 }
 
 .navbar-default .navbar-nav>li>a.link-service {
-  background-color: #cf6fc1;
+  background-color: #05ba5f;
 }
 
 .navbar-default .navbar-nav>li>a.link-facts {
@@ -6079,10 +6079,6 @@ a[class*=button-].button-light,input[class*=button-].button-light,button[class*=
 
 .navbar-default .navbar-nav>li>a.link-clients {
   background-color: #c55050;
-}
-
-.navbar-default .navbar-nav>li>a.link-coffee {
-  background-color: #4876c0;
 }
 
 .navbar-default .navbar-nav>li>a.link-contact {
