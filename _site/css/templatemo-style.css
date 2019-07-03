@@ -6181,6 +6181,27 @@ a[class*=button-].button-light,input[class*=button-].button-light,button[class*=
   letter-spacing: 0;
 }
 
+.service-test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.service-test h4 {
+  font-size: 16px;
+  color: #fff;
+  margin: 0;
+  height: 55px;
+  line-height: 55px;
+  background: url(../img/s.png) no-repeat center;
+  background-size: 100%;
+  position: relative;
+  z-index: 9;
+  height: 55px;
+  letter-spacing: 0;
+}
+
 .service-icon {
   margin-top: 30px;
   margin-bottom: 40px;
