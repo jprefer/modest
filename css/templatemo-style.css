@@ -23,10 +23,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
     background-image: url(../img/bg4.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     position: relative; 
     width: 100%; 
     height: 100%; 
+    
 }
 
 audio,canvas,progress,video {
