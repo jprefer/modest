@@ -20,11 +20,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 }
 
 .snow {
-    background-image: url(../img/bg2.jpg);
+    background-image: url(../img/bg4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
 }
 
 audio,canvas,progress,video {
