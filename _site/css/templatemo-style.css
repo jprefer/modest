@@ -19,6 +19,14 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
   display: block;
 }
 
+.snow {
+    background-image: url(../img/bg2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
 audio,canvas,progress,video {
   display: inline-block;
   vertical-align: baseline;
