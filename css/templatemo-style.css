@@ -20,7 +20,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 }
 
 .snow {
-    background-image: url(../img/bg7.jpg);
+    background-image: url(../img/bg2.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,6 +29,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
     height: 100%; 
    
     
+}
+
+.centerpic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 audio,canvas,progress,video {
